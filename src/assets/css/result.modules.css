@@ -1,0 +1,50 @@
+.charThumb{
+    text-align: center;
+    padding: 20px 0px;
+}
+.all-characters {
+    display: flex;
+    justify-content: center;
+}
+.char-desc{
+    text-align: center;
+}
+.charThumb img{
+    height: 350px;
+    transition: .2s;
+}
+.charThumb img:hover{
+    transform: translateY(-0.5rem); 
+}
+.charThumb .madger{
+    animation: 5s infinite forwards madger-animation;
+}
+.charThumb .aika{
+    animation: 5s infinite forwards aika-animation;
+}
+.charThumb .san{
+    animation: 5s infinite forwards san-animation;
+}
+.charThumb .singer{
+    animation: 5s infinite forwards singer-animation;
+}
+.desc-text {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+@keyframes madger-animation {
+	50% { filter: drop-shadow(2px 8px 20px rgb(0, 128, 0)); }
+}
+@keyframes singer-animation {
+	50% { filter: drop-shadow(2px 8px 20px rgb(159, 209, 226)); }
+}
+@keyframes san-animation {
+	50% { filter: drop-shadow(2px 8px 20px rgb(255, 165, 0)); }
+}
+@keyframes aika-animation {
+	50% { filter: drop-shadow(2px 8px 20px rgb(255, 0, 140)); }
+}
+.allCharacters{
+    display: flex;
+}

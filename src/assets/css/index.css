@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+h2{
+    margin: 0;
+}
+body{
+    font-family: 'JetBrains Mono', monospace;
+    color: rgb(232, 230, 227);
+    background-color: #000;
+    background-size: unset;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-image: url('../img/banner.webp');
+}
+a, span {
+    color: rgb(209, 106, 208);
+}
+#container{
+    background-color: #000;
+    border: 2px solid #9d319c;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+.content {
+    width: 95%;
+    margin: auto;
+    padding: 10px 0px;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+}
+.main-title {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.title {
+    color: #fb4cec;
+    padding-top: 15px;
+}
+.desc-text, .desc-title {
+    text-align: center;
+}
+.banner {
+    padding: 20px 0px;
+    margin: 20px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+.banner img{
+    filter: drop-shadow(2px 8px 10px gray);
+    transition-duration: 200ms;
+    height: 400px;
+}
+.banner img:hover{
+    transform: translateY(-0.5rem);
+}
+.banner .singer:hover {
+    filter: drop-shadow(2px 8px 20px rgb(159, 209, 226)) !important;
+    transition: 0.3s !important;
+}
+.banner .aika:hover {
+    filter: drop-shadow(2px 8px 20px #ff008c) !important;
+    transition: 0.3s !important;
+}
+.banner .madger:hover {
+    filter: drop-shadow(2px 8px 20px rgb(0, 128, 0)) !important;
+    transition: 0.3s !important;
+}
+.banner .san:hover {
+    filter: drop-shadow(2px 8px 20px rgb(255, 165, 0)) !important;
+    transition: 0.3s !important;
+}
+.btnArea,.btnsArea{
+    text-align: center;
+    padding: 20px;
+}
+.btnsArea button{
+    margin-right: 15px;
+}
+.btn {
+    color: #FFF;
+    border: 1px solid rgb(48, 52, 54);
+    padding: 10px;
+    text-decoration: none;
+    background: none;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+.btn:hover {
+    background-color: rgb(24, 26, 27);
+}
+.allCharacters{
+    display: flex;
+    justify-content: center;
+}
+.characters{
+    display: flex;
+}
+.character{
+    text-align: center;
+    margin: 0px 10px 15px 10px;
+}
+@media (max-width: 1010px) {
+    .banner img{
+        height: 350px;
+    }
+}
+@media (max-width: 860px) {
+    .banner img{
+        height: 300px;
+    }
+    .content{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .banner img {
+        padding: 0px 30px;
+    }
+    .characters{
+        justify-content: center;
+    }
+    .banner{
+        flex-direction: column;
+    }
+    #container{
+        width: 90%;
+    }
+}
+@media (max-width: 475px) {
+    #container{
+        width: 95%;
+    }
+}

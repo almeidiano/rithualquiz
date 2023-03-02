@@ -1,0 +1,37 @@
+#container{
+    background-color: #000;
+    border: 2px solid #9d319c;
+    width: 60%;
+}
+#centered_container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centered{
+    margin: 0 !important;
+}
+.btnsArea {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.question{
+    text-align: center;
+}
+.question_text{
+    color: rgb(232, 230, 227);
+    padding-left: 5px;
+}
+@media(max-width: 1000px) {
+    .dynamicWidth{
+        width: 95% !important;
+    }
+}
+@media(max-width: 560px) {
+    .dynamicWidth{
+        width: 100% !important;
+    }
+}

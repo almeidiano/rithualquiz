@@ -1,0 +1,45 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#startContainer{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(147, 46, 146);
+}
+.start_quiz_container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playerNickDesc {
+    text-align: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.question {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+}
+.startBtnArea {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.playerNickName {
+    background: #000;
+    border: 1px solid #FFF;
+    padding-left: 10px;
+    padding: 10px;
+    color: #CCC;
+    font-size: 15px;
+    font-weight: bold;
+}
+footer{
+    bottom: 0 !important;
+}
