@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/index.css" />
-	<link rel="shortcut icon" href="assets/images/thumb.png" type="image/x-icon">
-	<link rel="icon" href="assets/images/thumb.png" type="image/x-icon">
-	<title>Rithual Quiz</title>
-
-	<!-- Primary Meta Tags -->
-	<title>Rithual Quiz</title>
-	<meta name="title" content="Rithual Quiz">
-	<meta name="description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="og:title" content="Rithual Quiz">
-	<meta property="og:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="og:image" content="https://a.pomf.cat/bjfmaq.png">
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="twitter:title" content="Rithual Quiz">
-	<meta property="twitter:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="twitter:image" content="https://a.pomf.cat/bjfmaq.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>Rithual Quiz</title>
+    <link rel="stylesheet" href="src/css/result.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
 </head>
 <body>
 	<main id="container">
-		<div class="content"></div>
+		<div class="content">
+			<div class="main-title title"><h2>(૨¡Ƭષαℓ Quiz</h2></div>
+			<div class="desc-content">
+				<div class="desc-title">
+					<h3>Olá, <span class="highlight playerNick"></span>!</h3>
+				</div>
+				<div class="desc-text">
+					Você tem muitas semelhanças com o(a) protagonista:
+				</div>
+				<div class="char-thumb">
+					<img src="" />
+				</div>
+				<div class="desc-text character">
+					<h1></h1>
+				</div>
+				<div class="desc-title title">
+					<h3 class="highlight">Descrição</h3>
+				</div>
+				<div class="char-desc" style="word-wrap: break-word;"></div>
+				<div class="desc-title">
+					<h3 class="highlight">Pontuação dos personangens</h3>
+				</div>
+				<div class="allCharArea">
+					<div class="all-characters">
+						<div class="characters">
+							<div class="character singerChar">
+								<span>Singer</span>
+								<div class="percentage"></div>
+							</div>
+							<div class="character sanChar">
+								<span>San</span>
+								<div class="percentage"></div>
+							</div>
+						</div>
+						<div class="characters final">
+							<div class="character madgerChar">
+								<span>Madger</span>
+								<div class="percentage"></div>
+							</div>
+							<div class="character aikaChar">
+								<span>Aika</span>
+								<div class="percentage"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btnArea">
+					<button class="btn backToQuiz">Jogar novamente</button>
+					<button class="btn home">Voltar ao início</button>
+				</div>
+			</div>
+		</div>
 	</main>
-	<script type="module">
-		import Rithual_interface from './assets/js/classes/Interface.js';
-		import Quiz from './assets/js/classes/Quiz.js';
-		import { playerNick } from './assets/js/questions.js';
-
-		const characters = [
-			{id: 1, color: 'lightgreen', nick: "madger", name: "Madger Yasáshi", img: 'assets/images/characters/madger.webp', personality: "extro", desc: 'Você é uma pessoa bastante <span style="color:lightgreen;">extrovertida</span>, você ama aventuras e é bastante emotivo(a). Aproximando-se bastante da personalidade do Madger.'},
-			{id: 2, color: 'lightblue', nick: "singer", name: "Singer Faksumi", img: 'assets/images/characters/singer.webp', personality: "intro", desc: 'Você é uma pessoa que possui características de <span style="color:lightblue;">introversão</span>. Além disso, observador e pensativo. Aproximando-se bastante da personalidade do Singer.'},
-			{id: 3, color: 'orange', nick: "san", name: "San Majutsu-shi", img: 'assets/images/characters/san.webp', personality: "intellectual", desc: 'Você é uma pessoa com muito foco no <span style="color:orange;">intelectual</span>, você é bastante racional e até peca na questão física. Aproximando-se bastante da personalidade do San.'},
-			{id: 4, color: 'pink', nick: "aika", name: "Aika'Nu", img: 'assets/images/characters/aika.webp', personality: "charisma", desc: 'Você é uma pessoa <span style="color:pink;">carismática</span>, você se preocupa bastante com sua família e amigos. Ademais, você possui um bom juízo. Aproximando-se bastante da personalidade da Aika.'}
-		];
-
-		const quiz_result = JSON.parse(localStorage.allCharacters);
-
-		let rithual_interface = new Rithual_interface('.content', '(૨¡Ƭષαℓ Quiz', 'large', false);
-		rithual_interface.render_title(`Olá, <span class="bold">${playerNick}!</span>`);
-		rithual_interface.render_description(`Você tem muitas semelhanças com o(a) personagem: `);
-		// rithual_interface.render_footer();
-		Quiz.get_character_highest_point(quiz_result);
-		
-		Quiz.apply_char_result(Quiz.select_personality, characters);
-		const character = Quiz.get_final_character;
-
-		rithual_interface.render_customized_content(`<div class="char-thumb ${character.nick}-result"> <img src="${character.img}" /> </div> <div class="desc-text character"> <h4 style="color: ${character.color}">${character.name}</h4> </div>`);
-		rithual_interface.render_title(`Descrição`, true);
-		rithual_interface.render_customized_content(`<div class="char-desc" style="word-wrap: break-word;">${character.desc}</div>`);
-		rithual_interface.render_title(`Pontuação dos personagens`, false);
-		rithual_interface.render_customized_content(`<div class="all-char-area"> <div class="all-characters"> <div class="characters"> <div class="character singerChar"> <span>Singer</span> <div class="percentage"></div> </div> <div class="character sanChar"> <span>San</span> <div class="percentage"></div> </div> </div> <div class="characters final"> <div class="character madgerChar"> <span>Madger</span> <div class="percentage"></div> </div> <div class="character aikaChar"> <span>Aika</span> <div class="percentage"></div> </div> </div> </div> <div class="btnArea"> ${rithual_interface.button('Jogar Novamente', false, 'startquiz.html')} ${rithual_interface.button('Voltar ao inicio', false, 'index.html')} </div></div>`)
-		Quiz.get_all_characters_point;
-		localStorage.removeItem('allCharacters');
-		localStorage.removeItem('playerNick'); 
-	</script>
+	<script type="module" src="./dist/result.js"></script>
 </body>
 </html>

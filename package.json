@@ -1,17 +1,22 @@
 {
-  "name": "rithualquiz-vanilla",
-  "version": "2.0.0",
-  "description": "A quiz that estimates which character you would be in the universe of Rithual, a brazilian manga made by EduBox.",
+  "name": "rithual-quiz",
+  "version": "1.0.0",
+  "description": "A quiz that estimates which character you would be in the universe of ૨¡Ƭષαℓ.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "manga",
-    "quiz",
-    "quizapp",
-    "quiz-game"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almeidiano/rithual-quiz.git"
+  },
   "author": "Almeidiano",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almeidiano/rithual-quiz/issues"
+  },
+  "homepage": "https://github.com/almeidiano/rithual-quiz#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
 }

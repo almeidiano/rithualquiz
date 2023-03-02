@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/index.css" />
-	<link rel="shortcut icon" href="images/thumb.png" type="image/x-icon">
-	<link rel="icon" href="images/thumb.png" type="image/x-icon">
-	<title>Rithual Quiz</title>
-
-	<!-- Primary Meta Tags -->
-	<title>Rithual Quiz</title>
-	<meta name="title" content="Rithual Quiz">
-	<meta name="description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="og:title" content="Rithual Quiz">
-	<meta property="og:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="og:image" content="https://a.pomf.cat/bjfmaq.png">
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="twitter:title" content="Rithual Quiz">
-	<meta property="twitter:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="twitter:image" content="https://a.pomf.cat/bjfmaq.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>Rithual Quiz</title>
+    <link rel="stylesheet" href="src/css/quiz.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
 </head>
 <body>
 	<main id="container">
-		<div class="content"></div>
+		<div class="content">
+			<div class="main-title title"><h2>(૨¡Ƭષαℓ Quiz - Teste</h2></div>
+			<div class="desc-content">
+				<div class="playerNickDesc">
+					Digite seu apelido para deixar o teste customizado. 	
+				</div>
+				<form id="playerNick">
+					<div class="question">
+						<input required="" maxlength="15" type="text" class="playerNickName" placeholder="Digite seu Apelido">
+					</div>
+					<div class="startBtnArea"><button type="submit" class="btn">Começar o teste</button></div>
+					<p></p>
+				</form>
+			</div>
+		</div>
 	</main>
-	<script type="module">
-		import Rithual_interface from './assets/js/classes/Interface.js';
-
-		let rithual_interface = new Rithual_interface('.content', '(૨¡Ƭષαℓ Quiz - Teste', 'auto', true);
-		rithual_interface.render_description('Digite seu apelido para deixar o teste customizado.');
-		rithual_interface.render_customized_content(`<form id="playerNick"> <div class="question"> <input required="" maxlength="15" type="text" class="playerNickName" placeholder="Digite seu Apelido"> </div> <div class="startBtnArea"> ${rithual_interface.button('Começar o teste', true)} </div> </form>`);
-		rithual_interface.render_footer();
-
-		let form = document.querySelector('form');
-		let input = document.querySelector('input');
-
-		form.onsubmit = (e) => {
-			e.preventDefault();
-			let playerNick = input.value.trim();
-			localStorage.setItem('playerNick', playerNick);
-			window.location.href = 'quiz.html';
-		}
-	</script>
+	<footer><span>Developed by <a target="_blank" href="https://samuelalmeidadev.com.br/portfolio/"><img src="https://samuelalmeidadev.com.br/portfolio/assets/img/main-logo.svg" height="25" alt="Samuel Logo"></a></span></footer>
+	<script type="module" src="./dist/index.js"></script>
 </body>
 </html>

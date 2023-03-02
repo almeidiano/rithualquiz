@@ -1,31 +1,23 @@
-<h1 align="center">
-  <br>
-  <a href="#"><img src="https://a.pomf.cat/bjfmaq.png" alt="Rithual Quiz Logo" width="250"></a>
-  <br>
-  Rithual Quiz
-  <br>
-</h1>
+# Rithual Quiz
 
-<h4 align="center">A quiz that estimates which character you would be in the universe of <a href="https://tapas.io/series/Rithual_manga">૨¡Ƭષαℓ</a>, a brazilian manga made by <a href="https://tapas.io/87114774edu">Edubox</a></h4>
+<a href="#"><img src="https://img.shields.io/badge/TypeScript-4.9-blue" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Documentation-Yes-brightgreen" /></a> 
 
-<p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/TypeScript-4.9-blue" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Documentation-Yes-brightgreen" /></a> 
-</p>
+> A quiz that estimates which character you would be in the universe of ૨¡Ƭષαℓ.
 
-<p align="center">
-  <a href="#install">Install</a> •
-  <a href="#demo">Demo</a> •
-  <a href="#credits">Credits</a> •
-</p>
+<img height="250" src="https://a.pomf.cat/bjfmaq.png" alt="Rithual Quiz Logo">
 
-## Install 
+## 🚀 Install 
 
-1. Clone your repository and head over to the project directory: 
+1. Clone your repository: 
 
 ```sh
 git clone https://github.com/almeidiano/rithualquiz
+```
 
+2. Head over to the project directory: 
+
+```sh
 cd rithualquiz
 ```
 
@@ -35,12 +27,9 @@ cd rithualquiz
 npm install
 ```
 
-Done! just access the index page or run the project with ```npm run dev```.
+Done! just access the index page.
 
-## Demo
-You can access the demostration <a href="https://almeidiano.github.io/rithualquiz">here</a>
-
-## Credits
+## Author
 
 👤 **Samuel de Almeida**
 

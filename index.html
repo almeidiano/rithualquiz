@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/index.css" />
-	<link rel="shortcut icon" href="assets/images/thumb.png" type="image/x-icon">
-	<link rel="icon" href="assets/images/thumb.png" type="image/x-icon">
-	<title>Rithual Quiz</title>
-
-	<!-- Primary Meta Tags -->
-	<title>Rithual Quiz</title>
-	<meta name="title" content="Rithual Quiz">
-	<meta name="description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="og:title" content="Rithual Quiz">
-	<meta property="og:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="og:image" content="https://a.pomf.cat/bjfmaq.png">
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://almeidiano.github.io/rithualquiz">
-	<meta property="twitter:title" content="Rithual Quiz">
-	<meta property="twitter:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
-	<meta property="twitter:image" content="https://a.pomf.cat/bjfmaq.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>Rithual Quiz</title>
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+	<meta property=”og:image”content=”https://a.pomf.cat/vvstkt.png“/>
+	<meta property=”og:title” content=”Rithual Quiz“/>
+	<meta property=”og:description” content=”Um quiz que estima qual personagem você seria no universo de ૨¡Ƭષαℓ.“ />
 </head>
 <body>
-	<main id="container">
-		<div class="content"></div>
+    <main id="container">
+		<div class="content">
+			<div class="main-title title"><h2>(૨¡Ƭષαℓ Quiz</h2></div>
+			<div class="desc-content">
+				<div class="desc-title title">
+					<h3>Descrição</h3>
+				</div>
+				<div class="desc-text">
+					Este "Quiz" tem o intuito de estimar qual personagem você seria no universo de <a href="https://tapas.io/series/Rithual_manga/info" target="_blank">(૨¡Ƭષαℓ</a> a partir de 20 questões sobre sua personalidade & acontecimentos específicos. Mostre esse teste para os seus amigos e conheça mais esse universo!
+				</div>
+				<div class="desc-title title">
+					<h3>Informações Secundárias</h3>
+				</div>
+				<div class="desc-text">
+					Aviso: <span>nesse quiz, há perguntas pessoais que podem gerar desconforto.</span> Além disso, <span>nenhuma informação inserida aqui será divulgada.</span> Layout inspirado nos <a href="https://04elementos.github.io/4elementos/" target="_blank">4Elementos.</a>
+				</div>
+				<div class="banner">
+					<div class="characters">
+						<img class="singer" src="src/img/characters/blacksinger.webp">
+						<img class="aika" src="src/img/characters/blackaika.webp">
+					</div>
+					<div class="characters">
+						<img class="madger" src="src/img/characters/blackmadger.webp">
+						<img class="san" src="src/img/characters/blacksan.webp">
+					</div>
+				</div>
+				<div class="btnArea"><a href="startQuiz.html" class="btn">Começar Quiz</a></div>
+			</div>
+		</div>
 	</main>
-	<script type="module">
-		import Rithual_interface from './assets/js/classes/Interface.js';
-
-		let rithual_interface = new Rithual_interface('.content', '(૨¡Ƭષαℓ Quiz', 'large', false);
-
-		rithual_interface.render_title('Descrição', true);
-		rithual_interface.render_description('Este "Quiz" tem o intuito de estimar qual personagem você seria no universo de <a href="https://tapas.io/series/Rithual_manga/info" target="_blank">(૨¡Ƭષαℓ</a> (um mangá brasileiro criado por <a href="https://tapas.io/87114774edu" target="_blank">EduBox</a>) a partir de 20 questões sobre sua personalidade & acontecimentos específicos. Mostre esse teste para os seus amigos e conheça mais esse universo!');
-
-		rithual_interface.render_title('Informações Secundárias', true);
-		rithual_interface.render_description('Aviso: nesse quiz, há perguntas pessoais que podem <span>gerar desconforto.</span> Além disso, <span>nenhuma informação inserida aqui será divulgada.</span> Layout inspirado nos <a href="https://04elementos.github.io/4elementos/" target="_blank">4Elementos.</a>');
-
-		rithual_interface.render_customized_content(`<div class="banner"> <div class="characters"> <img class="singer" src="assets/images/characters/blacksinger.webp"> <img class="aika" src="assets/images/characters/blackaika.webp"> </div> <div class="characters"> <img class="madger" src="assets/images/characters/blackmadger.webp"> <img class="san" src="assets/images/characters/blacksan.webp"> </div> </div> <div class="btnArea">${rithual_interface.button('Começar Quiz', false, 'startquiz.html')}</div>`);
-		rithual_interface.render_footer();
-	</script>
+	<footer><span>Developed by <a target="_blank" href="https://samuelalmeidadev.com.br/portfolio"><img src="https://samuelalmeidadev.com.br/portfolio/assets/img/main-logo.svg" height="25" alt="Samuel Logo"></a></span></footer>
+    <script src="dist/index.js"></script>
 </body>
 </html>
