@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/index.css" />
+	<link rel="shortcut icon" href="assets/images/thumb.png" type="image/x-icon">
+	<link rel="icon" href="assets/images/thumb.png" type="image/x-icon">
+	<title>Rithual Quiz</title>
+
+	<!-- Primary Meta Tags -->
+	<title>Rithual Quiz</title>
+	<meta name="title" content="Rithual Quiz">
+	<meta name="description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://almeidiano.github.io/rithualquiz">
+	<meta property="og:title" content="Rithual Quiz">
+	<meta property="og:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
+	<meta property="og:image" content="https://a.pomf.cat/bjfmaq.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://almeidiano.github.io/rithualquiz">
+	<meta property="twitter:title" content="Rithual Quiz">
+	<meta property="twitter:description" content="Quiz que estima qual personagem você seria no universo de Rithual, um mangá brasileiro criado por EduBox.">
+	<meta property="twitter:image" content="https://a.pomf.cat/bjfmaq.png">
+</head>
+<body>
+	<main id="container">
+		<div class="content"></div>
+	</main>
+	<script type="module">
+		import Rithual_interface from './assets/js/classes/Interface.js';
+		import { questions } from './assets/js/questions.js';
+		import Quiz from './assets/js/classes/Quiz.js';
+
+		let rithual_interface = new Rithual_interface('.content', '(૨¡Ƭષαℓ Quiz - Teste', 'medium', true);	
+		rithual_interface.render_customized_content('<div class="question"> <span class="highlight bold">1.</span> <p class="question-text"></p> </div> <div class="btnsArea"></div>');
+		rithual_interface.render_footer();
+		
+		let quiz = new Quiz();
+		quiz.shuffle_questions(questions);
+		quiz.show_question_and_answers();
+
+		document.updateQuestion = (e) => {
+			quiz.sum_player_attributes(e);
+			quiz.re_render_question_and_answers();
+		}
+	</script>
+</body>
+</html>

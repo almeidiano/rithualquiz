@@ -1,0 +1,17 @@
+{
+  "name": "rithualquiz-vanilla",
+  "version": "2.0.0",
+  "description": "A quiz that estimates which character you would be in the universe of Rithual, a brazilian manga made by EduBox.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "manga",
+    "quiz",
+    "quizapp",
+    "quiz-game"
+  ],
+  "author": "Almeidiano",
+  "license": "ISC"
+}
